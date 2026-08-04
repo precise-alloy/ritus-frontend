@@ -1,0 +1,16 @@
+{
+  "name": "ritus-frontend-marketplace",
+  "version": "1.0.0",
+  "description": "Standalone marketplace for ritus-frontend",
+  "owner": {
+    "name": "eshn"
+  },
+  "plugins": [
+    {
+      "name": "ritus-frontend",
+      "description": "Objective, re-runnable browser visual verification via Playwright MCP - runs standalone or alongside ritus",
+      "version": "0.1.0",
+      "source": "./"
+    }
+  ]
+}

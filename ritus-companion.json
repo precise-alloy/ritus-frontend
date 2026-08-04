@@ -1,0 +1,13 @@
+{
+  "name": "ritus-frontend",
+  "integrations": [
+    {
+      "skill": "e2e-plan",
+      "prompt": "When a task changes frontend files, after task-generation: dispatch the e2e-plan subagent."
+    },
+    {
+      "skill": "visual-verify",
+      "prompt": "When a task changes frontend files, before pr-review: dispatch the visual-verify subagent; block unless it reports VERIFY: PASS (i.e. on FAIL or BLOCKED)."
+    }
+  ]
+}
