@@ -21,7 +21,7 @@ TODO:
 
 ```markdown
 - [ ] Gate on required inputs (spec + base URL); report BLOCKED if either is missing.
-- [ ] Read the spec and its breakpoints (each section's `viewport(s)`).
+- [ ] Read the spec; validate ≥1 `## <route>`, each with `viewport(s)` and ≥1 `assertions:` entry (else BLOCKED).
 - [ ] Verify every `## <route>` section at each breakpoint.
 - [ ] Handoff.
 ```
@@ -30,7 +30,7 @@ TODO:
 
 For every `## <route>` section, at each `viewport(s)` width (height 800px unless the section pins `<w>x<h>`):
 
-1. `browser_resize` to the width, then `browser_navigate` to base URL + route — resize *before* navigating so
+1. `browser_resize` to the width **and height** (the section's `<w>x<h>`, else width × 800px — `browser_resize` requires both), then `browser_navigate` to base URL + route — resize *before* navigating so
    responsive rendering and interaction paths load correctly for this breakpoint.
 2. If the section's `preconditions` are not met (login redirect, missing seed data), report **BLOCKED** for that
    route — not FAIL; the environment, not the code, is unverifiable.
@@ -49,8 +49,9 @@ For every `## <route>` section, at each `viewport(s)` width (height 800px unless
 - **PASS** — an objective signal confirms it (or, for `paint:`, vision matches the basis).
 - **FAIL** — a signal contradicts it: the code is wrong.
 - **BLOCKED** — the environment cannot run it: no base URL, unmet preconditions, an unreachable target, or no
-  breakpoints. Never guess a port or assume `375`/`1280`.
+  breakpoints, or an invalid spec (no routes, or a route with no `assertions:` — it can check nothing).
+  Never guess a port or assume `375`/`1280`.
 
 ## Handoff
 
-- **Report:** your verdict - `VERIFY: PASS` or `VERIFY: FAIL` with gaps, or `VERIFY: BLOCKED` with the reason.
+- **Report:** the run-level verdict across every route × breakpoint — `VERIFY: PASS` only when all pass; `VERIFY: FAIL` (naming the route/breakpoint/assertion) if any assertion fails; `VERIFY: BLOCKED` (with reason + affected routes) if none failed but any check was blocked. FAIL takes precedence over BLOCKED.

@@ -7,7 +7,7 @@
     },
     {
       "skill": "visual-verify",
-      "prompt": "When a task changes frontend files, before pr-review: dispatch the visual-verify subagent; block on failure."
+      "prompt": "When a task changes frontend files, before pr-review: dispatch the visual-verify subagent; block unless it reports VERIFY: PASS (i.e. on FAIL or BLOCKED)."
     }
   ]
 }

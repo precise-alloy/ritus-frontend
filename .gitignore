@@ -1,0 +1,2 @@
+# Ritus local state — never commit secrets or browser evidence
+.ritus/.env.local

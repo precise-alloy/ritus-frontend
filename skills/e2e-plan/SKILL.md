@@ -8,8 +8,8 @@ user-invocable: true
 # e2e-plan
 
 Write an `e2e-spec.md` that `visual-verify` can run. It is a faithful, objective restatement of the outcomes you are
-given — never a new requirement. If a required input is missing (routes, per-route outcomes, breakpoints, output path),
-ask for it; if it is still not given, stop and report BLOCKED. Never assume breakpoints.
+given — never a new requirement. If a required input is missing (routes, per-route outcomes, breakpoints), ask for it; if it is still not
+given, stop and report BLOCKED. The output path is optional — default to `./e2e-spec.md`. Never assume breakpoints.
 
 When starting e2e-plan, create this TODO — **every item below, verbatim** — and mark each done as you complete it:
 

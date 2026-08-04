@@ -27,18 +27,20 @@ Install just this plugin — no `ritus` core required.
 **Claude Code:**
 
 1. Add marketplace
-2. Install Ritus
+2. Install the plugin
 
 ```text
 /plugin marketplace add precise-alloy/ritus-frontend
 /plugin install ritus-frontend
 ```
 
+> In an active Claude Code session, run `/reload-plugins` after installing so the plugin's MCP server starts.
+
 **GitHub Copilot CLI:**
 
 1. Add the marketplace
 2. Fetch the plugin manifest
-3. Install Ritus
+3. Install the plugin
 
 ```text
 /plugin marketplace add precise-alloy/ritus-frontend
@@ -48,7 +50,7 @@ Install just this plugin — no `ritus` core required.
 
 ### Alongside ritus
 
-Install `ritus` as well — same marketplace.
+Install `ritus` as well — it ships from the ritus **core** marketplace (separate from this plugin's own).
 
 Claude Code:
 
