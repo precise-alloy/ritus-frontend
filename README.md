@@ -17,7 +17,7 @@ command required.
 
 ## Installation
 
-Both platforms read the plugin manifest's `"mcpServers": ".mcp.json"` and auto-activate the server on install (MCP
+Both platforms read the plugin manifest's `"mcpServers": "./.mcp.json"` and auto-activate the server on install (MCP
 precedence: plugins load last-wins, deduped by server name). One `.mcp.json` serves both.
 
 ### Standalone
