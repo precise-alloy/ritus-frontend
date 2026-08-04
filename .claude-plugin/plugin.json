@@ -1,0 +1,18 @@
+{
+  "name": "ritus-frontend",
+  "description": "Objective, re-runnable browser visual verification via Playwright MCP - runs standalone or alongside ritus",
+  "version": "0.1.0",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "author": {
+    "name": "eshn"
+  },
+  "keywords": [
+    "AI",
+    "workflow",
+    "visual verification",
+    "playwright",
+    "browser",
+    "mcp"
+  ]
+}
